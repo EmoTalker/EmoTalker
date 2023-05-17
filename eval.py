@@ -110,11 +110,7 @@ def main(args):
 if __name__ == '__main__':
     parser = ArgumentParser()
     parser.add_argument("--result_dir", default='results_neutral', help="path to output")
-    parser.add_argument("--pose_style", type=int, default=0,  help="input pose style from [0, 46)")
     parser.add_argument("--batch_size", type=int, default=8,  help="the batch size of facerender")
-    parser.add_argument('--camera_yaw', nargs='+', type=int, default=[0], help="the camera yaw degree")
-    parser.add_argument('--camera_pitch', nargs='+', type=int, default=[0], help="the camera pitch degree")
-    parser.add_argument('--camera_roll', nargs='+', type=int, default=[0], help="the camera roll degree")
     parser.add_argument("--cpu", dest="cpu", action="store_true")
     parser.add_argument("--preprocess", default='crop', choices=['crop', 'resize', 'full'], help="how to preprocess the images" )
     parser.add_argument("--test_path", type=str)
